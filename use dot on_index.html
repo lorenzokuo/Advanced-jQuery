@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>using dot on</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script>
+  $(document).ready(function(){
+   $('button').click(function(){
+    $('div').append('<h3>I am a new content</h3>');
+   });
+   $('div.a').on('mouseover', 'h3', function(){ 
+    $(this).css('color', 'pink');
+   });
+  });
+</script> -->
+ <script>
+  $(document).ready(function(){
+   $('button').click(function(){
+    $('div').append('<h3>I am a new content</h3>');
+   });
+   $(document).on('mouseover', 'h3', function(){
+    $(this).css('color', 'pink');
+   });
+  });
+ </script>
+
+</head>
+<!-- <body>
+  <button>Click me</button>
+  <div class="a">
+   <h3>I am old content</h3>
+  </div>
+  <div class="b">
+   <h3>I am old content</h3>
+  </div>
+</body> -->
+<body>
+  <button>Click me for new content!</button>
+  <div class='a'>
+   <h3>I am old content</h3>
+  </div>
+  <div class='b'>
+   <h3>I am old content</h3>
+  </div>
+ </body>
+</html>
